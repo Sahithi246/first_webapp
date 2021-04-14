@@ -1,0 +1,51 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my_learning</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/dashboard.css' %}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Hello User</h2>
+			<ul>
+				<li><a href="login_user">Home</a></li>
+				<li><a href="my_learning">My Learning</a></li>
+				<li><a href="my_mentors">My Mentors</a></li>
+				<li><a href="assignments">Assignments</a></li>
+				<li><a href="">Profile</a></li>
+				<li><a href="">Logout</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="view_main">
+	<div class="view_wrap list-view">
+		<!--Cretae a class here  -->
+		<div class="view_item">
+			<div class="vi_left">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+			<div class="vi-right">
+				<p class="title">Sample</p>
+				<p class="content">This is just sample image to check whether it is working or not.If it is wokking i'm so happy or else i'll come up with another technique.</p>
+				<a href="" class="btn">View More</a>
+			</div>
+		</div>
+		<div class="view_item">
+			<div class="vi_left">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+			<div class="vi-right">
+				<p class="title">Sample</p>
+				<p class="content">This is just sample image to check whether it is working or not.If it is wokking i'm so happy or else i'll with another technique.</p>
+				<a href="" class="btn">View More</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

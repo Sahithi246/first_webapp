@@ -1,0 +1,62 @@
+{% load static %}
+{% static "images" as s %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/login_user.css' %}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="links">
+			<ul>
+				<li><a href="login_user.html">HOME</a></li>
+				<li><a href="dashboard.html">DASHBOARD</a></li>
+				<li><a href="">COURSES</a>
+					<div class="dropdown">
+						<ul>
+							<li><a href="">All Courses</a></li>
+							<li><a href="">Web Designing</a></li>
+							<li><a href="">Python</a></li>
+							<li><a href="">Cloud Computing</a></li>
+							<li><a href="">C++</a></li>
+							<li><a href="">Daa Science</a></li>
+							<li><a href="">Machine Learning</a></li>
+							<li><a href="">Android Development</a></li>
+							<li><a href="">Ethical Hacking</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="">MENTORS</a></li>
+				<li><a href="">LOGOUT</a></li>
+
+			</ul>
+		</div>
+	</div>
+<div class="view_main">
+	<div class="view_wrap list-view">
+		<!--Cretae a class here  -->
+		<div class="view_item">
+			<div class="vi_left">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+			<div class="vi-right">
+				<p class="title">Sample</p>
+				<p class="content">This is just sample image to check whether it is working or not.If it is wokking i'm so happy or else i'll come up with another technique.</p>
+				<a href="" class="btn">View More</a>
+			</div>
+		</div>
+		<div class="view_item">
+			<div class="vi_left">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+			<div class="vi-right">
+				<p class="title">Sample</p>
+				<p class="content">This is just sample image to check whether it is working or not.If it is wokking i'm so happy or else i'll with another technique.</p>
+				<a href="" class="btn">View More</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

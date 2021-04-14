@@ -1,0 +1,83 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="sub-header">
+		<nav>
+			<a href="{% static 'index.html' %}"><img src="{% static 'images/image2.png' %}"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times-circle" onclick="hidemenu()"></i>
+				<ul>
+				<li><a href="{% static 'index.html' %}">HOME</a></li>
+					<li><a href="{% static 'about.html' %}">ABOUT</a></li>
+					<li><a href="{% static 'login.html' %}">LOGIN</a></li>
+					<li><a href="{% static 'register.html' %}">REGISTER</a></li>
+					<li><a href="{% static 'contact.html' %}">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showmenu()"></i>
+		</nav>
+		<h1>Contact us</h1>
+
+	</section> 
+
+<section class="location">
+	
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7711.075502572902!2d78.00952229999997!3d14.907104200000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb41cac1ac11fc5%3A0x88d73997ef3b3bf6!2sLalitha%20MegaMall!5e0!3m2!1sen!2sin!4v1617702785008!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</section>
+<section class="contact-us">
+	<div class="row">
+		<div class="contact-col">
+			<div>
+				<i class="fa fa-home"></i>
+				<span>
+					<h5>Putlur Road, Vinayaka Complex</h5>
+					<p>Tadipatri,Anatapur,A.P.</p>
+				</span>
+			</div>
+			<div>
+				<i class="fa fa-phone"></i>
+				<span>
+					<h5>+1 0123456789 </h5>
+					<p>+91 </p>
+				</span>
+			</div>
+		</div>
+		<div class="contact-col"></div>
+	</div>
+	
+</section>
+
+
+<section class="footer">
+	<h4>About us</h4>
+	<p>where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs </p>
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+	</div>
+</section>
+
+<script>
+	var navLinks=document.getElementById("navLinks");
+
+	function showmenu(){
+		navLinks.style.right="0";
+	}
+	function hidemenu(){
+		navLinks.style.right="-200px"
+	}
+</script>
+</body>
+</html>

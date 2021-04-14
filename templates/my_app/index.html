@@ -1,0 +1,133 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>University</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="{% static 'images/image2.png' %}"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times-circle" onclick="hidemenu()"></i>
+				<ul>
+					<li><a href="{% static 'index.html' %}">HOME</a></li>
+					<li><a href="{% static 'about.html' %}">ABOUT</a></li>
+					<li><a href="accounts/login">LOGIN</a></li>
+					<li><a href=accounts/register>STUDENT</a></li>
+					<li><a href="accounts/register_t">MENTOR</a></li>							
+					<li><a href="{% static 'contact.html' %}">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showmenu()"></i>
+		</nav>
+
+<div class="text-box">
+	<h1>World's Biggest University</h1>
+	<p>Making website is now one of the easiest things in the worls.You just need to learn HTML,CSS,<br>Javascript and you are good to go.</p>
+	<br>
+	<a href="" class="hero-btn">Visit us to know more</a>
+</div>
+	</section> 
+
+
+<!----course----->
+<section class="course">
+	<h1>Courses we offer</h1>
+	<p>These are the courses we offer</p>
+	<div class="row">
+		<div class="course-col">
+			<h3>Intermediate</h3>
+			<p>Type =lorem() into your document where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs with random text from Microsoft support pages.=rand.old() inserts text that repeats "The quick brown fox jumps over the lazy dog"</p>
+			
+		</div>
+		<div class="course-col">
+			<h3>Degree</h3>
+			<p>Type =lorem() into your document where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs with random text from Microsoft support pages.=rand.old() inserts text that repeats "The quick brown fox jumps over the lazy dog"</p>
+			
+		</div>
+		<div class="course-col">
+			<h3>Post Graduation</h3>
+			<p>Type =lorem() into your document where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs with random text from Microsoft support pages.=rand.old() inserts text that repeats "The quick brown fox jumps over the lazy dog"</p>
+			
+		</div>
+	</div>
+</section>
+
+
+<section class="campus">
+	<h1>Global Campus</h1>
+	<p>where you want the dummy text to be placed.Hit Enter to insert the  </p>
+	<div class="row">
+	{% for dest in dests %}
+		<div class="campus-col">
+			<img src="{{dest.img.url}}">
+			<div class="layer">
+				<h3>{{dest.name}}</h3>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+</section>
+
+
+<section class="facilities">
+	<h1>Our facilities</h1>
+	<p>text that repeats "The quick brown fox jumps over the lazy dog"</p>
+	<div class="row">
+		<div class="facilities-col">
+			<img src="{% static 'images/library.png' %}">
+			<h3>World class library</h3>
+			<p>where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs </p>
+		</div>
+		<div class="facilities-col">
+			<img src="{% static 'images/basketball.png' %}">
+			<h3>Sports</h3>
+			<p>where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs </p>
+		</div>
+		<div class="facilities-col">
+			<img src="{% static 'images/cafeteria.png' %}">
+			<h3>Hostel Facilities</h3>
+			<p>where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs </p>
+		</div>
+	</div>
+	
+</section>
+
+
+<section class="cta">
+	<h1>Enroll for our various online courses<br>anywhere from the world</h1>
+	<a href="" class=hero-btn>ENROLL</a>
+	
+</section>
+
+
+<section class="footer">
+	<h4>About us</h4>
+	<p>where you want the dummy text to be placed.Hit Enter to insert the text.=rand() inserts paragraphs </p>
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+	</div>
+</section>
+
+
+<script>
+	var navLinks=document.getElementById("navLinks");
+
+	function showmenu(){
+		navLinks.style.right="0";
+	}
+	function hidemenu(){
+		navLinks.style.right="-200px"
+	}
+</script>
+</body>
+</html>

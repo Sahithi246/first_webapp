@@ -1,0 +1,79 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignments</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/dashboard.css' %}">	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Hello User</h2>
+			<ul>
+			<li><a href="login_user">Home</a></li>
+				<li><a href="my_learning">My Learning</a></li>
+				<li><a href="my_mentors">My Mentors</a></li>
+				<li><a href="assignments">Assignments</a></li>
+				<li><a href="">Profile</a></li>
+				<li><a href="">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrappers">
+		<div class="links">
+			<ul>
+				<li class="li-list active" data-view="list-views">Assignments</li>
+			</ul>
+		</div>
+	
+	<div class="view_mains">
+	<div class="view_wrap list-views">
+		<!--Cretae a class here  -->
+		<div class="view_items">
+			<div class="vi_lefts">
+				<img src="{% static 'images/about.jpg' %}">
+			</div>
+			<div class="vi-rights">
+				<p class="titles">Sample</p>
+				<p class="contents">This is just sample image to check whether it is working or not.If it is wokking i'm so happy or else i'll come up with another technique.</p>
+				<a href="" class="btns">View More</a>
+			</div>
+		</div>
+	  </div>
+	
+   </div>
+ </div>
+
+<!--
+<script>
+var li_links=document.querySelectorAll(".links ul li");
+var view_wraps=document.querSelectorAll(".view_wrap");
+
+li_links.forEach(function(Link){
+	link.addEventListener("click",function(){
+		li_links.forEach(function(item){
+			item.classList.remove("active");
+			})
+		link.classList.add("active");
+
+		var li_view=link.getAttribute("data-view");
+
+		view_wraps.forEach(function(view)
+		{
+			view.style.display="none";
+		})
+		
+		if(li_view=="list_views"){
+			document.querySelector("."+li_view).style.display="block";
+		}
+		else{
+			document.querySelector("."+li_view).style.display="block";
+		}
+	})
+	})--->
+
+
+</body>
+</html>

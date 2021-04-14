@@ -1,0 +1,32 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/dashboard.css' %}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Hello User</h2>
+			<ul>
+				<li><a href="login_user">Home</a></li>
+				<li><a href="my_learning">My Learning</a></li>
+				<li><a href="my_mentors">My Mentors</a></li>
+				<li><a href="assignments">Assignments</a></li>
+				<li><a href="">Profile</a></li>
+				<li><a href="">Logout</a></li>
+			</ul>
+		</div>
+		<div class="mentor">
+			<p>Start your learning jouney by enrolling into differnt courses</p>
+			<img src="{% static 'images/teacher.jpg' %}">
+			<a href="" class="btn">Explore Now</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>

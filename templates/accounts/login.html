@@ -1,0 +1,74 @@
+{% load static %}
+{% static "images" as s %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/register.css' %}">
+	
+</head>
+<body>
+
+<div class="messages">
+	{% for message in messages %}
+	<script>alert("{{ message }}")</script>
+	{% endfor %}
+
+</div>
+ <div class="container">
+ 	<div class="header">
+ 		<h1>login</h1>
+ 	</div>
+ 	<div class="main">
+ 		<form action="login" method="post" onsubmit="return validate()">
+ 			{% csrf_token %}
+ 			<span>
+ 				<i class="fa fa-user"></i>
+ 				<input type="text" name="username" placeholder="Enter Username" id="username">
+ 			</span><br>
+ 			<span>
+ 				<i class="fa fa-lock"></i>
+ 				<input type="password" name="password" placeholder="Enter password" id="password">
+
+ 			</span><br>
+
+ 				<input type="submit" name="" value="Login">
+
+
+ 		</form>
+ 	</div>
+ </div>
+ <script>
+	var navLinks=document.getElementById("navLinks");
+
+	function showmenu(){
+		navLinks.style.right="0";
+	}
+	function hidemenu(){
+		navLinks.style.right="-200px"
+	}
+</script>
+<script>
+	function validate()
+{
+var res;
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+if(username==null  || username=="")
+{
+	alert("Name can't be blank");
+    return false;
+}else if(password.length<6)
+{
+    alert("Password must be atleast 6 characters long.");
+    return false;
+}
+
+
+}
+</script>
+</body>
+</html>
